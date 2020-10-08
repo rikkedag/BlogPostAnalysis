@@ -1,0 +1,9 @@
+\noindent For both the SVM and the AdaBoost, the accuracy is roughly the same, using the same 8 predictors. This is hardly surprising, but it is satisfying that both algorithms yield the same results. There is however a clear runtime difference between SVM and AdaBoost: SVM requires extensive tuning, which has a rather runtime, with AdaBoost being significantly faster and requiring no tuning of parameters.\\
+
+\noindent Both algorithms have acceptance rates of $\sim$ 63\%, which is hardly impressive when compared to the best results from the articles we have read, which can come close to 89\% \cite{other}. However, the large difference seems to come from the fact that their predictors have been based largely on clever linguistic choices (writing styles parametrized in some clever way, etc.), which we do not have the linguistic knowledge to repeat.\\
+
+\noindent Also interesting is the fact that the SVM's performance does not increase significantly with more training data after 20\%. This suggest that the generalization potential has been reached, meaning that the algorithm does not become better at generalizing as it gets more data.\\
+
+\noindent Using all 13 predictors for the AdaBoost algorithm improves the accuracy by 2.4\%, a slight improvement. That such clear seperation in 5 very common words exists (as shown in figure \ref{fig:Corner_word} is somewhat surprising, but may reflect on the formal vs contextual writing style which is apparently distinctive in the two genders \cite{data}.\\
+
+\noindent In general, some separation of data was obtained (significantly better than blind guesses), though not nearly as well as the best in literature \cite{other}, and it seems that SVM and AdaBoost perform equally well in seperation, though SVM has larger runtime.

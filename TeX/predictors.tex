@@ -1,0 +1,17 @@
+When analysing the blogs with the intention of identifying the gender of the auther, we need a set of predictors to run the learning algoritms on. Here we have two kinds of data: we have meta data, giving us the gender, age, job, and zodiac sign; and we have the actual blog, from which we can run a set of summary statistics on.
+The meta data itself is aplicable to the learning algorith with minor modifications: The genders \"male\" and \"female\" can be directly translated into the binary labels $(1,2)$. The age does not need any translation and can be used directly. The jobs are pre-processed into 40 categories, and here each category can be assigned a label $(1,2,\dots,40)$. Finally the zodiac sign can also be translated to a label $(1,2,\dots,12)$.
+
+For summary statistics we choose a few simple statistics, and a few more elaborate, and we will later consider the effectiveness of these statistics.
+\begin{enumerate}
+	\item[] The average post length (measured in number characters)
+	\item[] The average word length (measured in number of characters)
+	\item[] The average time between posts
+	\item[] The average number of URL links per post
+	\item[] The percentage of \"Internet Words\" (defined below)
+	\item[] The percentage of \"adjectives\" (defined below)
+\end{enumerate}
+In the above section \"Internet Words\" are defined to be from the following list:
+(lol, wtf, wth, dafuq, rofl, omg, brb, btw, irl, imo, jk, np, thx, imho, bae, bff, gr8, fml, l8r, yolo, swag, fyi, nvm, glhf, lulz, tbh, fail, 404, xoxo, stfu, 1337, noob, afaik, iou, asap, asl, w00t, cu, cya, ffs, fml, tmi, ftw, fu, derp, gtfo, haxor, idk, srsly, tldr, m8, sext, troll, sk8, sk8r, ty)
+
+And \"adjectives\" are defined as words ending with\cite(other):
+(able, al, ful, ible, ic, ive ,less, ly, ous)
